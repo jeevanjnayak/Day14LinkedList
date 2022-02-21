@@ -3,7 +3,7 @@ import org.testng.annotations.Test;
 
 public class LinkedListOperationTest {
     @Test
-    void given3NumbersWhenAddedToLinkedList_ShouldBeAddedToTop(){
+    void given3NumbersWhenAdded_ShouldBeAddedToTop(){
         System.out.println("Added to Top");
         MyLinkedList<Integer> myFirstNode = new MyLinkedList<>(70);
         MyLinkedList<Integer> mySecondNode= new MyLinkedList<>(30);
@@ -19,7 +19,7 @@ public class LinkedListOperationTest {
         Assert.assertTrue(result);
     }
     @Test
-    void given3NumbersAppend_ShouldBeAddedToLast(){
+    void given3NumbersAppended_ShouldBeAddedToLast(){
         System.out.println("Added to last");
         MyLinkedList<Integer> myFirstNode = new MyLinkedList<>(56);
         MyLinkedList<Integer> mySecondNode= new MyLinkedList<>(30);
@@ -35,7 +35,7 @@ public class LinkedListOperationTest {
         Assert.assertTrue(result);
     }
     @Test
-    void givenNumbersWhenInsert_ShouldPassLinkListResult(){
+    void givenNumberWhenInserted_ShouldBeInserted(){
         System.out.println("\nInsert in between");
         MyLinkedList<Integer> myFirstNode = new MyLinkedList<>(56);
         MyLinkedList<Integer> mySecondNode= new MyLinkedList<>(30);
@@ -51,19 +51,19 @@ public class LinkedListOperationTest {
         Assert.assertTrue(result);
     }
     @Test
-    void givenNumbersWhenDeleted_ShouldPassLinkListResult(){
+    void givenNumbersWhenDeleted_ShouldBeDeleted(){
         System.out.println("\nDeleted first number");
-        MyLinkedList<Integer> myFirstNode = new MyLinkedList<>(56);
-        MyLinkedList<Integer> mySecondNode= new MyLinkedList<>(30);
-        MyLinkedList<Integer> myThirdNode= new MyLinkedList<>(70);
+        MyLinkedList<Integer> FirstNode = new MyLinkedList<>(56);
+        MyLinkedList<Integer> SecondNode= new MyLinkedList<>(30);
+        MyLinkedList<Integer> ThirdNode= new MyLinkedList<>(70);
         LinkedListOperation myLinkedList= new LinkedListOperation();
-        myLinkedList.add(myFirstNode);
-        myLinkedList.append(mySecondNode);
-        myLinkedList.append(myThirdNode);
+        myLinkedList.add(FirstNode);
+        myLinkedList.append(SecondNode);
+        myLinkedList.append(ThirdNode);
         myLinkedList.pop();
         myLinkedList.printMyNode();
-        boolean result=myLinkedList.head.equals(mySecondNode) &&
-                myLinkedList.tail.equals(myThirdNode);
+        boolean result=myLinkedList.head.equals(SecondNode) &&
+                myLinkedList.tail.equals(ThirdNode);
         Assert.assertTrue(result);
     }
     @Test
@@ -83,7 +83,7 @@ public class LinkedListOperationTest {
         Assert.assertTrue(result);
     }
     @Test
-    public void given3NumberWhenAppendedToLinkedListShouldSearch30() {
+    public void given3NumberWhenAppended_ShouldSearch30() {
         System.out.println("\nSearch number 30");
         MyLinkedList<Integer> myFirstNode= new MyLinkedList<>(56);
         MyLinkedList<Integer> mySecondNode= new MyLinkedList<>(30);
@@ -97,7 +97,7 @@ public class LinkedListOperationTest {
         Assert.assertTrue(result);
     }
     @Test
-    public void given3NumberSearch30InLinkedListShouldBeInserted40After30() {
+    public void given3NumberSearch30_ShouldBeInserted40After30() {
         System.out.println("\nSearch number 30 and add 40 after it");
         MyLinkedList<Integer> myFirstNode= new MyLinkedList<>(56);
         MyLinkedList<Integer> mySecondNode= new MyLinkedList<>(30);
@@ -115,7 +115,7 @@ public class LinkedListOperationTest {
         Assert.assertTrue(result);
     }
     @Test
-    public void givenSearchNumber40InLinkedListShouldBeDeleted() {
+    public void givenSearchNumber40_ShouldBeDeleted() {
         System.out.println("\nSearch number 40 and delete it");
         MyLinkedList<Integer> myFirstNode= new MyLinkedList<>(56);
         MyLinkedList<Integer> mySecondNode= new MyLinkedList<>(30);
@@ -134,7 +134,7 @@ public class LinkedListOperationTest {
         Assert.assertTrue(result);
     }
     @Test
-    public void givenShouldReturn() {
+    public void givenNumbers_ShouldReturnInAOrder() {
         System.out.println("\nOrdered Linked List");
         OrderedLinkedList<Integer> linkedList = new OrderedLinkedList<>();
         linkedList.add(56);
